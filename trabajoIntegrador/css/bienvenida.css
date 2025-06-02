@@ -6,12 +6,11 @@
 
 body {
     position: relative;
-    font-family: sans-serif;
     height: 100vh;
     overflow: hidden;
 }
 nav {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(102, 95, 95, 0.8);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     color: rgb(0, 0, 0);
     display: flex;
@@ -21,7 +20,6 @@ nav {
     margin-bottom:100px;
 
 }
-
 .logo {
     font-size: 1.5rem;
 }
@@ -47,11 +45,9 @@ nav {
     margin: auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 h1 {
     margin-bottom: 20px;
 }
-
 input {
     width: 250px;
     height: 30px;
@@ -61,7 +57,6 @@ input {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     margin-bottom: 15px;
 }
-
 button {
     width: 120px;
     height: 35px;
