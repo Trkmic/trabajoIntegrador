@@ -1,0 +1,282 @@
+[
+    {
+    "id": 1,
+    "nombre": "Auriculares Bluetooth redmi",
+    "precio": 15000,
+    "img": "../assets/img/images.jpg",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 2,
+    "nombre": "Cargador Rápido USB-C",
+    "precio": 7000,
+    "img": "../assets/img/cargador-de-220v-a-usb-samsung-cable-15w-type-c-ep-t1510xbsgar-negro.png",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 3,
+    "nombre": "Mouse Inalámbrico",
+    "precio": 9500,
+    "img": "../assets/img/1000x1000-MOUSE030.jpg",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 4,
+    "nombre": "Teclado Mecánico RGB",
+    "precio": 28000,
+    "img": "../assets/img/1019-producto-teclado-hyperx-origins-60-aqua-6-5382.jpg",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 5,
+    "nombre": "Soporte para Celular",
+    "precio": 3000,
+    "img": "../assets/img/download.jpg",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 6,
+    "nombre": "Cable HDMI 2m",
+    "precio": 2500,
+    "img": "../assets/img/images (1).jpg",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 7,
+    "nombre": "Adaptador USB-C a Jack 3.5mm",
+    "precio": 4000,
+    "img": "../assets/img/adaptador-jack-3-5-30836ae57ea39f15c417037914723286-1024-1024.jpeg",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 8,
+    "nombre": "Funda para Notebook 15''",
+    "precio": 8000,
+    "img": "../assets/img/afni-0156-ca59a6e1ff4a3274aa17089661198024-1024-1024.jpg",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 9,
+    "nombre": "Alfombrilla Gamer HyperX",
+    "precio": 3200,
+    "img": "../assets/img/1_d76ba593-88fa-44eb-89f9-00e381c4a0b3.webp",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 10,
+    "nombre": "Cargador Inalámbrico",
+    "precio": 10000,
+    "img": "../assets/img/D_NQ_NP_992731-MLA77926800197_072024-O.webp",
+    "categoria": "accesorio"
+    },
+    {
+    "id": 11,
+    "nombre": "Placa de video RTX 3060",
+    "precio": 430000,
+    "img": "../assets/img/600.png",
+    "categoria": "componente"
+    },
+    {
+    "id": 12,
+    "nombre": "Procesador Ryzen 5 5600X",
+    "precio": 190000,
+    "img": "../assets/img/000000000041306882104413068.png",
+    "categoria": "componente"
+    },
+    {
+    "id": 13,
+    "nombre": "Memoria RAM 16GB DDR4",
+    "precio": 70000,
+    "img": "../assets/img/40390_4.jpeg",
+    "categoria": "componente"
+    },
+    {
+    "id": 14,
+    "nombre": "Disco SSD 1TB",
+    "precio": 95000,
+    "img": "../assets/img/36061_1.jpeg",
+    "categoria": "componente"
+    },
+    {
+    "id": 15,
+    "nombre": "Motherboard B550M",
+    "precio": 120000,
+    "img": "../assets/img/download (1).jpg",
+    "categoria": "componente"
+    },
+    {
+    "id": 16,
+    "nombre": "Fuente 650W 80 Plus bronze",
+    "precio": 85000,
+    "img": "../assets/img/FUENTE-GAMER-GIGABYTE-650W-80-PLUS-BRONZE.webp",
+    "categoria": "componente"
+    },
+    {
+    "id": 17,
+    "nombre": "Cooler CPU RGB",
+    "precio": 30000,
+    "img": "../assets/img/1.webp",
+    "categoria": "componente"
+    },
+    {
+    "id": 18,
+    "nombre": "Gabinete ATX con RGB",
+    "precio": 60000,
+    "img": "../assets/img/download (2).jpg",
+    "categoria": "componente"
+    },
+    {
+    "id": 19,
+    "nombre": "Placa de red WiFi PCIe",
+    "precio": 20000,
+    "img": "../assets/img/download (3).jpg",
+    "categoria": "componente"
+    },
+    {
+    "id": 20,
+    "nombre": "Disco HDD 2TB",
+    "precio": 75000,
+    "img": "../assets/img/download (4).jpg",
+    "categoria": "componente"
+    },
+    {
+    "id": 21,
+    "nombre": "Samsung Galaxy S23",
+    "precio": 950000,
+    "img": "../assets/img/download (5).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 22,
+    "nombre": "iPhone 14",
+    "precio": 1250000,
+    "img": "../assets/img/download (6).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 23,
+    "nombre": "Motorola Edge 40",
+    "precio": 650000,
+    "img": "../assets/img/download (7).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 24,
+    "nombre": "Xiaomi Redmi Note 12",
+    "precio": 420000,
+    "img": "../assets/img/download (8).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 25,
+    "nombre": "Realme C55",
+    "precio": 330000,
+    "img": "../assets/img/download (9).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 26,
+    "nombre": "Samsung Galaxy A34",
+    "precio": 410000,
+    "img": "../assets/img/download (10).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 27,
+    "nombre": "iPhone SE 2022",
+    "precio": 890000,
+    "img": "../assets/img/download (11).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 28,
+    "nombre": "Motorola G73",
+    "precio": 370000,
+    "img": "../assets/img/download (12).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 29,
+    "nombre": "Samsung Galaxy Z Flip",
+    "precio": 1450000,
+    "img": "../assets/img/download (13).jpg",
+    "categoria": "celular"
+    },
+    {
+    "id": 30,
+    "nombre": "Xiaomi Poco X5 Pro",
+    "precio": 510000,
+    "img": "../assets/img/download (14).jpg",
+    "categoria": "celular"
+    },
+    {  
+    "id": 31, 
+    "nombre": "Smart TV Samsung 55'' 4K",
+    "precio": 750000,
+    "img": "../assets/img/download (15).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 32,
+    "nombre": "LG OLED 65'' 4K",
+    "precio": 1100000,
+    "img": "../assets/img/download (16).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 33,
+    "nombre": "Noblex 43'' Full HD",
+    "precio": 380000,
+    "img": "../assets/img/download (17).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 34,
+    "nombre": "Philips 50'' 4K Ambilight",
+    "precio": 570000,
+    "img": "../assets/img/download (18).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 35,
+    "nombre": "Hisense 55'' ULED",
+    "precio": 690000,
+    "img": "../assets/img/download (19).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 36,
+    "nombre": "TCL 65'' 4K Google TV",
+    "precio": 800000,
+    "img": "../assets/img/download (20).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 37,
+    "nombre": "BGH 32'' HD",
+    "precio": 280000,
+    "img": "../assets/img/BGH-Android-TV-HD_32--1-.jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 38,
+    "nombre": "Samsung Neo QLED 8K",
+    "precio": 2400000,
+    "img": "../assets/img/download (21).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 39,
+    "nombre": "LG NanoCell 55''",
+    "precio": 730000,
+    "img": "../assets/img/download (22).jpg",
+    "categoria": "televisor"
+    },
+    {
+    "id": 40,
+    "nombre": "TCL 43'' Roku TV",
+    "precio": 360000,
+    "img": "../assets/img/download (23).jpg",
+    "categoria": "televisor"
+    }
+]

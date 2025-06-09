@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to right, #1e1e2f, #2c3e50);
+    color: #f0f0f0;
+}
+
+nav {
+    background: rgba(30, 30, 47, 0.85);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 60px;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nombres{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+.logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Barra de búsqueda moderna */
+.search-bar {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.search-bar::placeholder {
+    color: #bbb;
+}
+.search-bar:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de categoría estilo moderno */
+.categoria {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.categoria:hover {
+    background-color: #2980b9;
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/* Sección de productos */
+.seccion-productos {
+    padding: 60px 40px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Layout de productos */
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas de producto */
+.product-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    text-align: center;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.product-card img {
+    width: 140px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: transparent;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin: 5px 0 15px;
+}
+
+/* Botón dentro de la tarjeta */
+.product-card button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #219150;
+}
+
+/* Carrito style */
+
+.carrito-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.carrito-toggle {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carrito-toggle:hover {
+    background-color: #27ae60;
+}
+
+/* Carrito con animación de despliegue */
+.cart-section {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(44, 62, 80, 0.95);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.cart-section.visible {
+    right: 0;
+}
+
+.cart-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cart-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+
+}
+.delete-button:hover {
+    background-color: red;
+}
+
+.end-button {
+    background-color: blue;
+    color: white;
+}
+.end-button:hover {
+    background-color: blue;
+}
+
+.cart-total {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cerrar-carrito {
+    position: absolute;
+    right: 10px;
+    background: none;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+}
+
