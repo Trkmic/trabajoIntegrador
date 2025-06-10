@@ -6,27 +6,104 @@
 
 body {
     position: relative;
-    font-family: sans-serif;
-    height: 100vh;
-    overflow: hidden;
+    background: #1e1e2f;
+    color: white;
 }
+
 nav {
-    background-color: rgba(102, 95, 95, 0.8);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    color: rgb(0, 0, 0);
+    background: rgba(30, 30, 47, 0.85);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    margin-bottom:100px;
-
+    padding: 15px 30px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.logo {
+.nombres{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.btn-salir {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-salir:hover {
+    background-color: #940303;
+}
+
+
+.ticket-contenedor {
+    background: #1e3a8a;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 30px 45px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.ticket-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.ticket-fecha {
     font-size: 1.5rem;
 }
-.search-bar {
-    padding: 8px;
-    border-radius: 4px;
-    border: none;
-    width: 250px;
+
+.ticket-fecha p {
+    margin-bottom: 10px;
+}
+
+.ticket-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ticket-tabla th,
+.ticket-tabla td {
+    border-bottom: 1px solid white;
+    padding: 10px 10px;
+    text-align: left;
+    color: white;
+    font-weight: 500;
+}
+
+.ticket-tabla thead {
+    background-color: #0077b6; /* azul fuerte para encabezado */
+    color: white;
+    font-weight: 700;
+}
+
+.ticket-tabla tr:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.ticket-total {
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+}
+
+.ticket-total strong {
+    font-size: 1.8rem;
 }

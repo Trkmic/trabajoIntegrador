@@ -2,20 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI';
 }
 
 body {
     position: relative;
-    height: 100vh;
-    background: linear-gradient(to right, #1e1e2f, #2c3e50);
-    color: #f0f0f0;
+    background: #1e1e2f;
+    color: white;
 }
 
 nav {
     background: rgba(30, 30, 47, 0.85);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,15 +26,10 @@ nav {
 .nombres{
     font-size: 1.3rem;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
 }
 .logo{
     font-size: 1.8rem;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Barra de búsqueda moderna */
@@ -45,14 +39,13 @@ nav {
     border: none;
     width: 280px;
     background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: white;
     transition: background-color 0.3s ease;
 }
 .search-bar::placeholder {
-    color: #bbb;
+    color: white;
 }
 .search-bar:focus {
-    outline: none;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -61,15 +54,15 @@ nav {
     padding: 10px 16px;
     border-radius: 8px;
     border: none;
-    background-color: #3498db;
-    color: #fff;
+    background-color: blue;
+    color: white;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 .categoria:hover {
-    background-color: #2980b9;
+    background-color: blue;
 }
 
 /* Títulos */
@@ -78,7 +71,7 @@ h2 {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 2rem;
-    color: #ffffff;
+    color: white;
 }
 
 /* Sección de productos */
@@ -124,13 +117,13 @@ h2 {
 
 .product-card h3 {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: white;
     margin: 10px 0;
 }
 
 .product-card p {
     font-size: 1rem;
-    color: #cccccc;
+    color: white;
     margin: 5px 0 15px;
 }
 
@@ -149,26 +142,26 @@ h2 {
     background-color: #219150;
 }
 
-/* Carrito style */
-
-.carrito-container {
-    margin-top: 10px;
-    text-align: center;
-}
+/* estilo del carrito */
 
 .carrito-toggle {
-    padding: 10px 20px;
-    background-color: #2ecc71;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: green;
     color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    z-index: 1000;  /* Hace que el carrito este por delante de todo*/
     transition: background-color 0.3s ease;
 }
 
 .carrito-toggle:hover {
-    background-color: #27ae60;
+    background-color: #008f3b;
 }
 
 /* Carrito con animación de despliegue */
@@ -179,7 +172,6 @@ h2 {
     width: 350px;
     height: 100%;
     background-color: rgba(44, 62, 80, 0.95);
-    backdrop-filter: blur(6px);
     padding: 20px;
     transition: right 0.4s ease;
     display: flex;
@@ -219,7 +211,7 @@ h2 {
 
 }
 .delete-button:hover {
-    background-color: red;
+    background-color: rgb(141, 2, 2);
 }
 
 .end-button {
@@ -227,7 +219,7 @@ h2 {
     color: white;
 }
 .end-button:hover {
-    background-color: blue;
+    background-color: rgb(1, 1, 146);
 }
 
 .cart-total {
@@ -244,4 +236,5 @@ h2 {
     color: red;
     cursor: pointer;
 }
+
 
