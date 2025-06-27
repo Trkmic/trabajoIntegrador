@@ -1,6 +1,6 @@
 function renderizarTicket(){
-    const items = document.getElementById("ticket-items");
-    const precioFinal = document.querySelector(".ticket-total");
+    const items = document.querySelector(".items_ticket");
+    const precioFinal = document.querySelector(".total_ticket");
 
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -21,18 +21,18 @@ function renderizarTicket(){
         fila.innerHTML = `
             <td>${nombre}</td>
             <td>${cantidad}</td>
-            <td>${precio}</td>
-            <td>${totalProducto}</td>
+            <td>$${precio.toFixed(2)}</td>
+            <td>$${totalProducto.toFixed(2)}</td>
         `;
 
         items.appendChild(fila);
     });
 
-    precioFinal.innerHTML = `<strong>Total:</strong> ${total}`;
+    precioFinal.innerHTML = `El total de tu compra fue de: $ ${total.toFixed(2)}`;
 }
 
 function mostrarFecha() {
-    const fechaElemento = document.getElementById("ticket-fecha");
+    const fechaElemento = document.querySelector(".date_ticket");
     const fecha = new Date();
     // Formateo simple: día/mes/año
     const fechaFormateada = fecha.toLocaleDateString('es-ES');
@@ -41,7 +41,7 @@ function mostrarFecha() {
 
 
 function salir(){
-    const boton = document.querySelector("#btn-salir");
+    const boton = document.querySelector(".container_exit_icon");
     
         boton.addEventListener("click",() => {
             localStorage.removeItem("carrito");

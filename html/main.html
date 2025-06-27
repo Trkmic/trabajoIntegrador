@@ -1,65 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-    <title> TRABAJO INTEGRADOR </title>
-    <link rel="icon" href="../assets/img/monitor-screen-computer-with-colorful-rainbow-bubble-illustration-logo-design-vector.jpg" type="image/x-icon">
-</head>
-    <body>
+<html lang="es">
 
-        <!-- LA BARRA DE ARRIBA -->
-        <nav class="navbar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>TRABAJO INTEGRADOR</title>
+        <!-- FAVICON -->
+        <link rel="icon" href="../assets/img/favicon.ico">
+        <!-- CÓDIGO CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/4e7bc93003.js" crossorigin="anonymous"></script>
+        <!-- FUENTES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
+    </head>
 
-            <div class="logo"> LOGO </div>
-            <input type="text" placeholder="Search..." class="search-bar">
+    <body id="grilla_index">
 
-            <select id="categoriaSeleccionada" class="categoria">
-                <option disabled selected> Selecciona una categoria</option>
-                <option value="accesorio">Accesorios</option>
-                <option value="componente">Componentes</option>
-                <option value="celular">Celulares</option>
-                <option value="televisor">Televisores</option>
-            </select>
-
-            <div class="nombres">
-                Ignacio Trkmic Torres - Alejo Tomkiewicz
-            </div>
-            
-        </nav>
-        <!-- LA BARRA DE ARRIBA -->
-        
-        <div class="carrito-container">
-            <button id="toggle-cart" class="carrito-toggle">🛒</button>
-        </div>
-
-        <!-- LA PARTE DE LOS PRODUCTOS -->
-        <section class="seccion-productos">
-            <h2 id="tituloCategoria"> TODOS LOS PRODUCTOS DISPONIBLES </h2>
-            <div class="productos"></div>
-        </section>
-        <!-- LA PARTE DE LOS PRODUCTOS -->
-
-        <!-- LA PARTE DEL CARRITO QUE IGUAL ESTA OCULTA -->
-        <section id="carrito-detalle" class="cart-section">
-            
-            <button id="cerrar-carrito" class="cerrar-carrito">✖</button>
-            <h2 class="cart-titulo">Carrito</h2>
-
-            <ul id="cart-items">
-
-            </ul>
-
-            <div class="cart-buttons">
-                <button id="delete-button" class="delete-button">Vaciar carrito</button>
-                <button class="end-button">Finalizar compra</button>
-                <span class="cart-total">Total: $0.00</span>
+        <header id="grilla_header">
+            <div class="container_logo header_left">
+                <a href="main.html"><img class="logo" src="../assets/img/logo.png" alt="logo de la página"></a>
             </div>
 
-        </section>
-        <!-- LA PARTE DEL CARRITO QUE IGUAL ESTA OCULTA -->
+            <div class="container_search header_center">
+                <input type="text" name="search" id="search_input" class="search_bar" placeholder="Buscar productos, marcas y más...">
+                <div class="container_search_icon">
+                    <i class="fa-solid fa-magnifying-glass fa-lg search_icon"></i>
+                </div>
+            </div>
+
+            <div class="container_toggle_cart header_right">
+                <button id="toggle_cart" class="toggle_cart"><i class="fa-solid fa-cart-shopping fa-2xl cart_icon"></i></button>
+                <span class="contador_cart">0</span>
+            </div>
+        </header>
+
+        <main id="grilla_main">
+
+            <section class="product_section">
+                <div class="container_title_select">
+                    <h1 class="title_category">Catálogo de productos</h1>
+                    <div class="container_select">
+                        <div class="container_select_icon">
+                            <span>Selecciona una categoria</span>
+                            <i class="fa-solid fa-arrow-down fa-lg"></i>
+                        </div>
+                        <ul class="select_items hidden">
+                            <li data-value="accesorio">Accesorios</li>
+                            <li data-value="componente">Componentes</li>
+                            <li data-value="celular">Celulares</li>
+                            <li data-value="televisor">Televisores</li>
+                            <li data-value="todas">Todos los productos</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="products"></div>
+            </section>
+
+            <section class="cart_section">
+                <div class="container_title_icon_cart">
+                    <h2 class="h2_cart">Resumen de carrito</h2>
+                    <button id="close_cart" class="close_cart"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+                </div>
+
+                <div class="buttons_cart hidden">
+                    <span class="cart_total">Total: $0.00</span>
+                    <button class="end_button">Finalizar compra<i class="fa-solid fa-credit-card fa-sm"></i></button>
+                </div>
+
+                <div class="items_cart_scrollable">
+                    <ul class="items_cart">
+                        <span class="empty_cart_text">No hay elementos agregados en el carrito.</span>
+                    </ul>
+                </div>
+
+                <div class="container_clear_button hidden">
+                    <button id="clear_button" class="clear_button">Vaciar carrito<i class="fa-solid fa-trash fa-sm"></i></button>
+                </div>
+                
+            </section>
+
+        </main>
+
+        <footer id="grilla_footer">
+            <section class="footer_section">
+                <a href="main.html"><img class="logo" src="../assets/img/logo.png" alt="logo de la página"></a>
+            </section>
+        </footer>
 
         <script src="../js/main.js"></script>
-    </body> 
+    </body>
+
 </html>

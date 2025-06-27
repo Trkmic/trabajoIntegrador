@@ -1,93 +1,81 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/*HEADER*/
+
+#grilla_header.header_bienvenida {
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
-body {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(to right, #1e1e2f, #2c3e50);
-    color: #f0f0f0;
-}
-
-nav {
-    background: rgba(30, 30, 47, 0.9);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    color: #f8f8f8;
+/*MAIN*/
+.main_bienvenida {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    margin-bottom: 80px;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    background-image: url("../assets/img/fondo-bienvenida-2.webp");
 }
 
-.logo, .nombres {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.fondo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.4);
-}
-
-.contenedor {
-    position: relative;
+.access_section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: auto;
-    max-width: 450px;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 40px 30px;
-    border-radius: 20px;
-    margin: auto;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    justify-content: center;    
+    position: relative;
+    height: 300px;
+    width: 400px;
+    padding: 40px 30px; 
+    border: 1px solid var(--color-bk-search-bar);      
+    border-radius: 8px;
+    background-color: var(--color-bk-product-card);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
-h1 {
-    margin-bottom: 25px;
-    font-size: 2rem;
-    text-align: center;
+.access_section h1 {
+    font-size: 50px;
 }
 
-input {
+.access_section input {
     width: 100%;
     height: 40px;
     padding: 10px;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
+    color: var(--color-text-white);    
+    background-color: var(--color-bk-search-bar);
     border-radius: 8px;
-    color: #fff;
-    transition: background 0.3s;
+    border: none;
+    transition: all 0.3s ease-in-out;    
 }
-button {
+
+.access_section input::placeholder {
+    color: var(--color-search-bar);
+}
+
+.access_section input:focus {
+    background-color: var(--color-focus-search-bar);
+}
+
+.access_section input:focus::placeholder {
+    color: var(--color-focus-search-bar);
+}
+
+.container_continue_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: 500 18px "Quicksand", sans-serif;
     width: 100%;
     height: 40px;
-    background: blue;
-    color: #fff;
+    margin-top: 20px;
+    padding: 10px 16px 10px 16px;
+    background: var(--color-secondary);
+    color: var(--color-text-white);
     border: none;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: all 0.3s ease-in-out;
 }
-button:hover {
-    background: blue;
+
+.container_continue_button:hover {
+    background: var(--color-secondary-hover);
     transform: scale(1.03);
 }
