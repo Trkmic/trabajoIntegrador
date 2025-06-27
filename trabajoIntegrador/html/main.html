@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title> TRABAJO INTEGRADOR </title>
+    <link rel="icon" href="../assets/img/monitor-screen-computer-with-colorful-rainbow-bubble-illustration-logo-design-vector.jpg" type="image/x-icon">
+</head>
+    <body>
+
+        <!-- LA BARRA DE ARRIBA -->
+        <nav class="navbar">
+
+            <div class="logo"> LOGO </div>
+            <input type="text" placeholder="Search..." class="search-bar">
+
+            <select id="categoriaSeleccionada" class="categoria">
+                <option disabled selected> Selecciona una categoria</option>
+                <option value="accesorio">Accesorios</option>
+                <option value="componente">Componentes</option>
+                <option value="celular">Celulares</option>
+                <option value="televisor">Televisores</option>
+            </select>
+
+            <div class="nombres">
+                Ignacio Trkmic Torres - Alejo Tomkiewicz
+            </div>
+            
+        </nav>
+        <!-- LA BARRA DE ARRIBA -->
+        
+        <div class="carrito-container">
+            <button id="toggle-cart" class="carrito-toggle">🛒</button>
+        </div>
+
+        <!-- LA PARTE DE LOS PRODUCTOS -->
+        <section class="seccion-productos">
+            <h2 id="tituloCategoria"> TODOS LOS PRODUCTOS DISPONIBLES </h2>
+            <div class="productos"></div>
+        </section>
+        <!-- LA PARTE DE LOS PRODUCTOS -->
+
+        <!-- LA PARTE DEL CARRITO QUE IGUAL ESTA OCULTA -->
+        <section id="carrito-detalle" class="cart-section">
+            
+            <button id="cerrar-carrito" class="cerrar-carrito">✖</button>
+            <h2 class="cart-titulo">Carrito</h2>
+
+            <ul id="cart-items">
+
+            </ul>
+
+            <div class="cart-buttons">
+                <button id="delete-button" class="delete-button">Vaciar carrito</button>
+                <button class="end-button">Finalizar compra</button>
+                <span class="cart-total">Total: $0.00</span>
+            </div>
+
+        </section>
+        <!-- LA PARTE DEL CARRITO QUE IGUAL ESTA OCULTA -->
+
+        <script src="../js/main.js"></script>
+    </body> 
+</html>
