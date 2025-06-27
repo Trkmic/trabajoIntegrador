@@ -1,0 +1,556 @@
+/*VARIABLES DE COLORES*/
+
+:root {
+    --color-text-white: #ffffff;
+    --color-bk-body: #1e1e2f;
+    --color-header: rgba(30, 30, 47, 0.85);
+    --color-main: rgb(44, 44, 75);
+    --color-footer: rgb(31, 31, 31);
+    --color-secondary: #02e197;
+    --color-secondary-hover: #20b860;
+
+    --color-search-bar: #d4d4d4c4;
+    --color-focus-search-bar: rgba(172, 172, 172, 0.24);
+    --color-bk-search-bar: rgba(255, 255, 255, 0.1);
+    --color-bk-section-products: rgba(255, 255, 255, 0.02);
+    --color-bk-product-card: rgba(255, 255, 255, 0.05);
+    --color-hover-cart: #c0c0c0;
+    --color-section-cart: rgba(44, 62, 80, 0.95);
+    --color-red: #C1121F;
+    --color-red-hover: #780000;
+}
+
+/*ETIQUETAS GENÉRICAS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* transiciones suaves al scrollear */
+}
+
+body {
+    background-color: var(--color-bk-body);
+    /*scrollbar-color: var(--color-secondary) var(--color-text-white); Firefox (thumb, track) */
+}
+
+h1 {
+    font: 400 60px 'DM Sans', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--color-text-white);
+}
+
+h2 {
+    font-family: "Hunnin", sans-serif;
+    font-weight: 400;
+}
+
+li {
+    list-style: none; /* saca puntos, etc del listado*/
+}
+
+button {
+    all: unset;/* saca estilos predeterminados */
+    cursor: pointer;
+}
+
+input:focus, select:focus {
+    outline: none; /* elimina borde o contorno */
+}
+
+/*HEADER*/
+.header_left, .header_center, .header_right {
+    display: flex;
+    align-items: center;
+}
+
+.header_left {
+    justify-content: flex-start;
+}
+
+.header_center {
+    justify-content: center;
+}
+
+.header_right {
+    justify-content: end;
+}
+
+.container_search {
+    display: flex;
+    align-items: center;
+    height: 45px;
+}
+
+.search_bar {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    background-color: var(--color-bk-search-bar);
+    color: var(--color-text-white);
+    transition: all 0.5s ease-in-out;
+}
+
+.search_bar::placeholder {
+    font-size: 16px;
+    color: var(--color-search-bar);
+}
+
+.search_bar:focus {
+    background-color: var(--color-focus-search-bar);
+}
+
+.search_bar:focus::placeholder {
+    color: var(--color-focus-search-bar);
+}
+
+.container_search_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    height: 100%;
+    width: 50px;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.container_search_icon:hover {
+    background-color: var(--color-secondary-hover);
+    cursor: pointer;
+}
+
+.toggle_cart .cart_icon{
+    color: var(--color-secondary);
+    transition: all 0.3s ease-in-out;
+    margin-left: 50px;
+}
+
+.toggle_cart .cart_icon:hover {
+    color: var(--color-secondary-hover);
+}
+
+.contador_cart {
+    font: 400 15px "Work Sans", sans-serif;
+    text-align: center; 
+    line-height: 18px; /* espacio entre lineas vertical */
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    background-color: var(--color-red);
+    color: var(--color-text-white);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+}
+
+/*MAIN*/
+
+/*Sección de productos*/
+.product_section {
+    padding: 70px 40px 60px 40px;
+    background-color: var(--color-bk-section-products);
+    border-top: 1px solid var(--color-bk-product-card);
+}
+
+.container_select {
+    width: 250px;
+    position: relative;
+    user-select: none; /* No se pueda seleccionar el texto/x con el cursor */
+    font-family: sans-serif;
+    margin-left: 15px;
+}
+
+.container_select_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px 8px 5px;
+    border-bottom: 3px solid var(--color-secondary);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    color: var(--color-search-bar);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.container_select_icon i {
+    color: var(--color-secondary);
+}
+
+.container_select_icon:hover {
+    border-bottom: 3px solid var(--color-secondary-hover);
+}
+
+.select_items {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: var(--color-header);
+    z-index: 10; /* control dee la superposicion de elementos */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.select_items li {
+    color: var(--color-text-white);
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.select_items li:hover {
+    background-color: var(--color-secondary);
+}
+
+.select_items.hidden {
+    display: none; /* oculta */
+}
+
+.select_items:not(.hidden) {
+    display: block; 
+}
+
+.icon_hidden {
+    display: none;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas de mismo espacio */
+    justify-items: center;
+    gap: 30px; /* espacio entre filas y columnas */
+    margin: 50px 0 60px 0;
+}
+
+.product_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bk-product-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 0 20px 20px 20px;
+    width: 220px;
+    height: 370px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.product_card:hover {
+    transform: translateY(-3px); /* se mueve 3 pixeles arriba */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.product_card img {
+    width: 140px;
+    height: 140px;
+    margin: 10px 0;
+    object-fit: contain;
+}
+
+.container_img_card {
+    width: 220px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.product_card:hover .container_img_card {
+    border-color: var(--color-secondary-hover);
+}
+
+.product_card h2 {
+    font-size: 22px;
+    color: var(--color-text-white);
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* cuando es largo el texto aparece "...."*/
+    margin: 20px 0 10px 0;
+}
+
+.product_card span {
+    font: 400 20px "Work Sans", sans-serif;
+    color: var(--color-search-bar);
+    margin: 20px 0;
+}
+
+.container_add_to_cart_icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: 500 15px "Quicksand", sans-serif;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px 10px 16px;
+    margin-top: auto;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+}
+
+.container_add_to_cart_icon:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.catalogo_vacio {
+    font: 300 30px 'DM Sans', sans-serif;
+    grid-column: span 6;  /* span significa "extenderse o abarcarque en este caso 6 columnas" NO hace referencia a la etiqueta <span> */
+    color: var(--color-text-white);
+}
+
+/*Pestaña desplegable del carrito*/
+.cart_section {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--color-header);
+    backdrop-filter: blur(10px);
+    transition: right 0.4s ease-in-out;
+    z-index: 100;
+}
+
+.cart_section.visible {
+    right: 0;
+}
+
+.container_title_icon_cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.h2_cart {
+    font: 300 26px "DM Sans", sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;  /* subraya texto */
+    text-align: center;
+    color: var(--color-text-white);
+}
+
+.close_cart {
+    color: var(--color-red);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.close_cart:hover {
+    color: var(--color-red-hover);
+}
+
+.buttons_cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.buttons_cart.hidden {
+    display: none;
+}
+
+.cart_total {
+    font: 400 22px "Work Sans", sans-serif;
+    color: var(--color-text-white);
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+.cart_total:hover {
+    color: var(--color-secondary-hover);
+    cursor: default;
+}
+
+.delete_button, .clear_button, .end_button {
+    display: flex;
+    justify-content: space-evenly; /* espacio igual entre elementos */
+    align-items: center;
+    font: 500 15px "Quicksand", sans-serif;
+    border-radius: 8px;
+    background-color: var(--color-red);
+    color: var(--color-text-white);
+    padding: 5px 0;
+    width: 70%;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.end_button {
+    width: 60%;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+}
+
+.end_button:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.clear_button {
+    width: 45%;
+}
+
+.container_clear_button {
+    display: flex;
+    justify-content: flex-end; /* alinea elementos al final del contenedor */
+}
+
+.container_clear_button.hidden {
+    display: none;
+}
+
+.clear_button {
+    margin-top: 20px;
+}
+
+.delete_button:hover, .clear_button:hover {
+    background-color: var(--color-red-hover);
+}
+
+.items_cart_scrollable {
+    flex-grow: 1;
+    overflow-y: auto; /* 	Sigue permitiendo el scroll si el contenido excede el contenedor */
+    margin-top: 16px;
+    scrollbar-width: none; /* Firefox oculta la barra de scroll */
+    -ms-overflow-style: none; /* IE / Edge antiguo oculta la barra de scroll*/ 
+}
+
+.items_cart_scrollable::-webkit-scrollbar {
+    display: none; /* Chrome / Safari / Edge */
+}
+
+.items_cart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* repetir dos columnas iguales */
+    row-gap: 10px;
+    align-items: stretch;
+    justify-items: center;
+    color: var(--color-text-white);
+}
+
+.card_product_cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "IBM Plex Sans JP", sans-serif;
+    width: 145px;
+    height: 100%;
+    margin: 10px 0 10px 0;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    background-color: var(--color-bk-product-card);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    
+}
+
+.card_product_cart img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.card_product_cart h3 {
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    height: 60px;
+}
+
+.card_product_cart .cant {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.card_product_cart .subtotal {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.empty_cart_text {
+    font: 300 26px 'DM Sans', sans-serif;
+    grid-column: span 2; /* span significa "extenderse o abarcar" NO hace referencia a la etiqueta <span> */
+}
+
+/*FOOTER*/
+
+.footer_section {
+    text-align: center;
+}
+
+/*GRILLAS*/
+#grilla_index {
+    display: grid;
+    grid-template-areas: "header header header" "main main main" "footer footer footer"; /* organiza el layout */ 
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columnas dos iguales y una distinta */ 
+    grid-template-rows: auto 1fr auto; /* 3 columnas, dos auto y una especifica */ 
+    min-height: 100vh;
+}
+
+#grilla_header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columnas, dos iguales y una distinta */ 
+    align-items: center;
+    align-content: center;
+    justify-items: stretch;
+    width: 100%;
+    height: 130px;
+    padding: 0 50px 10px 50px;
+    background-color: var(--color-header);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+#grilla_main { /* asigna elemento en su posicion */
+    grid-area: main;
+    background-color: var(--color-main);
+}
+
+#grilla_footer { /* asigna elemento en su posicion */
+    grid-area: footer;
+    background-color: var(--color-footer);
+}
+
+
+/*BARRA DE SCROLL*/
+/*Chrome, Edge, Safari*/
+::-webkit-scrollbar{ /* personaliza la barra  */
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{ /* personalizar la parte que se mueve del scrollbar */
+    background: var(--color-secondary);
+    border-radius: 15px;
+}
+
+/*GRILLAS RESPONSIVE*/
+
+
