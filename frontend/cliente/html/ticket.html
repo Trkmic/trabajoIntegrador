@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>TRABAJO INTEGRADOR</title>
+        <!-- FAVICON -->
+        <link rel="icon" href="../cliente/assets/img/favicon.png">
+        <!-- CÓDIGO CSS -->
+        <link rel="stylesheet" href="../cliente/css/style.css">
+        <link rel="stylesheet" href="../cliente/css/ticket.css">
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/4e7bc93003.js" crossorigin="anonymous"></script>
+        <!-- FUENTES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
+    </head>
+
+    <body id="grilla_index">
+
+        <header id="grilla_header">
+            <div class="container_logo">
+                <a href="main.html"><img class="logo" src="../cliente/assets/img/logo.png" alt="logo de la página"></a>
+            </div>
+            <div class="container_title_date_ticket">
+                <h1 class="title_ticket">Ticket de Compra</h1>
+                <div class="date_ticket">
+                    <p><strong>Fecha :</strong> <span class="date_ticket"></span></p>
+                </div>
+            </div>
+            <div class="container_exit_icon">
+                <button id="exit_button_ticket" class="exit_button_ticket">Salir</button>
+                <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i>
+            </div>   
+        </header>
+
+        <main id="grilla_main">
+            <section class="ticket_section">
+                <h2 class="subtitle_ticket">¡Muchas gracias por tu compra!</h2>
+                <p class="total_ticket">Total: $0</p>
+                <table class="table_ticket">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="items_ticket">
+
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer id="grilla_footer">
+            <section class="footer_section">
+                <a href="main.html"><img class="logo" src="../cliente/assets/img/logo.png" alt="logo de la página"></a>
+            </section>
+        </footer>
+
+        <script src="../cliente/js/ticket.js"></script>
+    </body> 
+
+</html>
