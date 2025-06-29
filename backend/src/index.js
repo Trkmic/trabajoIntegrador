@@ -22,6 +22,8 @@ app.use('/productos', productosRoutes);
 app.use("/assets", express.static(path.join(__dirname, "../assets")));
 
 //routes
+
+// CLIENTE
 app.get('/',(req,res)=>{
     res.status(200).sendFile("cliente/html/bienvenida.html", {root: rootDir});
 })
@@ -30,6 +32,17 @@ app.get('/main',(req,res)=>{
 })
 app.get('/ticket',(req,res)=>{
     res.status(200).sendFile("cliente/html/ticket.html", {root: rootDir});
+})
+
+// ADMINISTRADOR
+app.get('/login',(req,res)=>{
+    res.status(200).sendFile("admin/html/login.html", {root: rootDir});
+})
+app.get('/dashboard',(req,res)=>{
+    res.status(200).sendFile("admin/html/dashboard.html", {root: rootDir});
+})
+app.get('/altaProducto',(req,res)=>{
+    res.status(200).sendFile("admin/html/altaProducto.html", {root: rootDir});
 })
 
 //listeners
