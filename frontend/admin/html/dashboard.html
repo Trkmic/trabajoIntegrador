@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1> DASHBOARD </h1>
-</body>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>TRABAJO INTEGRADOR</title>
+        <!-- FAVICON -->
+        <link rel="icon" href="../../cliente/assets/img/favicon.png">
+        <!-- CÓDIGO CSS -->
+        <link rel="stylesheet" href="../../cliente/css/style.css">
+        <link rel="stylesheet" href="../../admin/css/dashboard.css">
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/4e7bc93003.js" crossorigin="anonymous"></script>
+        <!-- FUENTES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
+    </head>
+
+    <body id="grilla_index">
+
+        <header id="grilla_header">
+            <div class="container_logo header_left">
+                <a href="login.html"><img class="logo" src="../../cliente/assets/img/logo.png" alt="logo de la página"></a>
+            </div>
+
+            <div class="container_search header_center">
+                <input type="text" name="search" id="search_input" class="search_bar" placeholder="Buscar productos, marcas y más...">
+                <div class="container_search_icon">
+                    <i class="fa-solid fa-magnifying-glass fa-lg search_icon"></i>
+                </div>
+            </div>
+
+            <div class="header_right">
+                <button id="new_product" class="new_product"> Agregar producto </button>
+            </div>
+
+        </header>
+
+        <main id="grilla_main">
+
+            <section class="product_section">
+                <div class="container_title_select">
+                    <h1 class="title_category">Catálogo de productos</h1>
+                    <div class="container_select">
+                        <div class="container_select_icon">
+                            <span>Selecciona una categoria</span>
+                            <i class="fa-solid fa-arrow-down fa-lg"></i>
+                        </div>
+                        <ul class="select_items hidden">
+                            <li data-value="accesorio">Accesorios</li>
+                            <li data-value="componente">Componentes</li>
+                            <li data-value="celular">Celulares</li>
+                            <li data-value="televisor">Televisores</li>
+                            <li data-value="todas">Todos los productos</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="products"></div>
+            </section>
+
+            <section class="cart_section">
+                <div class="items_cart_scrollable">
+                    <ul class="items_cart">
+                        <span class="empty_cart_text">No hay elementos agregados en el carrito.</span>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="grilla_footer">
+            <section class="footer_section">
+                <a href="login.html"><img class="logo" src="../../cliente/assets/img/logo.png" alt="logo de la página"></a>
+            </section>
+        </footer>
+
+        <script src="admin/js/dashboard.js"></script>
+    </body>
+
 </html>
