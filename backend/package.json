@@ -2,15 +2,15 @@
   "name": "template-server-basic",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Ignacio Trkmic Torres",
+  "author": "Ignacio Trkmic Torres & Alejo Tomkiewicz",
   "license": "MIT",
-  "type": "module",
   "description": "Plantilla de servidor básica ",
   "dependencies": {
     "express": "^5.1.0",

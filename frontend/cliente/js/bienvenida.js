@@ -4,7 +4,7 @@ const continue_button = document.querySelector(".container_continue_button");
         const nombre = document.getElementById("name").value.trim();
 
         if (nombre !== "") {
-            window.location.href = "../cliente/html/main.html";
+            window.location.href = "/catalogo";
         } else{
             alert("Por favor, ingrese su nombre.");
         }
