@@ -10,8 +10,29 @@ function navBar() {
     });
 };
 
+function navResponsive() {
+    const navbar = document.querySelector(".navbar");
+    const openNav = document.querySelector(".open_navbar");
+    const closeNav = document.querySelector(".close_navbar");
+
+    if(openNav) {
+        openNav.addEventListener("click", () => {
+            navbar.classList.add("visible");
+            openNav.classList.add("hidden");
+        });
+    }
+
+    if(closeNav) {
+        closeNav.addEventListener("click", () => {
+            navbar.classList.remove("visible");
+            openNav.classList.remove("hidden");
+        });
+    }
+}
+
 function init() {
     navBar();
+    navResponsive();
 }
 
 init();

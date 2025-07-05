@@ -45,7 +45,7 @@ function renderizarTicket() {
         fila.innerHTML = `
             <td>${nombre}</td>
             <td>${cantidad}</td>
-            <td>$${precio.toLocaleString("es-AR")}</td>
+            <td class="hidden_mobile">$${precio.toLocaleString("es-AR")}</td>
             <td>$${totalProducto.toLocaleString("es-AR")}</td>
         `;
 

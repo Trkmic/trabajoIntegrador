@@ -34,10 +34,12 @@
 
         <header id="grilla_header">
             <div class="container_logo">
-                <a href="main.html"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
+                <a href="/catalogo"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
             </div>
 
+            <button class="open_navbar"><i class="fa-solid fa-bars fa-2xl"></i></button>
             <nav class="navbar header_center">
+                <button class="close_navbar"><i class="fa-solid fa-xmark fa-2xl"></i></button>
                 <ul class="navegacion">
                     <li><a href="/" class="nav_link">Registro</a></li>
                     <li><a href="/catalogo" class="nav_link">Catálogo</a></li>
@@ -72,7 +74,7 @@
                         <tr>
                             <th>Producto</th>
                             <th>Cantidad</th>
-                            <th>Precio Unitario</th>
+                            <th class="hidden_mobile">Precio Unitario</th>
                             <th>Subtotal</th>
                         </tr>
                     </thead>
@@ -89,7 +91,7 @@
 
         <footer id="grilla_footer">
             <section class="footer_section">
-                <a href="main.html"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
+                <a href="/catalogo"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
             </section>
         </footer>
 
