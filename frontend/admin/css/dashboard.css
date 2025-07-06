@@ -54,6 +54,22 @@
     background-color: var(--color-secondary-hover);
 }
 
+.btn-editar {
+    font: 500 15px "Quicksand", sans-serif;
+    padding: 2px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    transition: background-color 0.3s ease-in-out;
+    width: 90%;
+}
+
+.btn-editar button:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+
 .btn-desactivar {
     background-color: var(--color-red);
 }
@@ -66,6 +82,11 @@
 }
 .btn-activar:hover {
     background-color: var(--color-secondary-hover);
+}
+
+
+.btn-editar:hover {
+    background-color: #0056b3;
 }
 
 .new_product {

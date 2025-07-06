@@ -4,7 +4,7 @@ continue_button.addEventListener("click", () => {
     const nombre = document.getElementById("name").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    if (nombre === "franco" && password === "12345867867") {
+    if (nombre === "franco" && password === "1") {
         window.location.href = "/dashboard";
     } else {
         alert("Por favor, ingrese un usuario y contraseña válido");

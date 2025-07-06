@@ -11,4 +11,20 @@ const getAll = () => {
     });
 };
 
-export default { getAll };
+const actualizarEstado = (id, nuevoEstado) => {
+    return new Promise((resolve, reject) => {
+        const sql = "UPDATE productos SET activo = ? WHERE id = ?";
+        db.query(sql, [nuevoEstado, id], (err, result) => {
+            if (err) {
+                reject(err);
+            } else if (result.affectedRows === 0) {
+                resolve(null); // Producto no encontrado
+            } else {
+                resolve({ id, activo: nuevoEstado }); // Confirmación básica
+            }
+        });
+    });
+};
+
+
+export default { getAll, actualizarEstado };
