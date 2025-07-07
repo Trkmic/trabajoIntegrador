@@ -5,4 +5,9 @@ const getAll = async () => {
     return productos;
 };
 
-export default { getAll };
+const actualizarEstado = async (id, nuevoEstado) => {
+    return await productoModel.actualizarEstado(id, nuevoEstado);
+};
+
+
+export default { getAll, actualizarEstado };

@@ -28,6 +28,7 @@ function renderizarProductos(lista){
     lista.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add("product_card");
+        div.setAttribute("data-id", producto.id);
 
         const estado = producto.activo ? "Activo" : "Inactivo";
         const botonAccion = producto.activo
@@ -136,8 +137,43 @@ function agregarProducto(){
 
 }
 
-function estadoProducto(){
+function manejarCambioEstado() {
+    const contenedor = document.querySelector(".products");
+    contenedor.addEventListener("click", (event) => {
+        if (event.target.classList.contains("btn-activar") || event.target.classList.contains("btn-desactivar")) {
+            const boton = event.target;
+            const tarjeta = boton.closest(".product_card");
+            const estado = tarjeta.querySelector(".estado_producto");
+            const productoId = tarjeta.getAttribute("data-id");
 
+            // Determinar nuevo estado según el botón clickeado
+            const nuevoEstado = boton.classList.contains("btn-activar");
+
+            // Cambiar visualmente el estado antes de hacer fetch
+            if(nuevoEstado) {
+                estado.textContent = "Estado: Activo";
+                estado.classList.remove("inactivo");
+                estado.classList.add("activo");
+
+                boton.textContent = "Desactivar";
+                boton.classList.remove("btn-activar");
+                boton.classList.add("btn-desactivar");
+            } else {
+                estado.textContent = "Estado: Inactivo";
+                estado.classList.remove("activo");
+                estado.classList.add("inactivo");
+
+                boton.textContent = "Activar";
+                boton.classList.remove("btn-desactivar");
+                boton.classList.add("btn-activar");
+            }
+
+            // Actualizar estado en el array productos
+            const producto = productos.find(p => p.id === productoId);
+            if(producto) producto.activo = nuevoEstado;
+            
+        }
+    });
 }
 
 function init() {
@@ -147,7 +183,15 @@ function init() {
     filtroCategoria();
     focusSearchInput();
     agregarProducto();
-    estadoProducto()
+    manejarCambioEstado()
+
+    const icon = document.querySelector(".container_search_icon");
+    if(icon) {
+        icon.addEventListener("click", focusSearchInput);
+        icon.addEventListener("click", aplicarFiltro);
+    } else{
+        alert("error");
+    }
 }
 
 document.addEventListener("DOMContentLoaded", init);

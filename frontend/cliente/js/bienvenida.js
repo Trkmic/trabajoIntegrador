@@ -14,4 +14,3 @@ const admin_button = document.querySelector(".container_admin_button");
     admin_button.addEventListener("click",() => {
             window.location.href = "/login";
 });
-
