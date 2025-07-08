@@ -35,4 +35,4 @@ function init() {
     navResponsive();
 }
 
-init();
+document.addEventListener("DOMContentLoaded", init);

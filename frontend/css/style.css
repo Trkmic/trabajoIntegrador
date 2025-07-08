@@ -135,6 +135,17 @@ input:focus, select:focus {
     color: var(--color-secondary);
 }
 
+.nav_link.admin {
+    background-color: var(--color-red);
+    border-radius: 8px;
+    padding: 5px 7px;
+}
+
+.nav_link.admin:hover {
+    background-color: var(--color-red-hover);
+    color: var(--color-text);
+}
+
 .nav_link.active {
     color: var(--color-secondary);
 }

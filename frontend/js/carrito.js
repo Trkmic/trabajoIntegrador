@@ -173,4 +173,4 @@ function init() {
     buttonsCart();
 }
 
-init();
+document.addEventListener("DOMContentLoaded", init);
