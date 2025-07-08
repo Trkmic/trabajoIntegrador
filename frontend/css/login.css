@@ -1,0 +1,186 @@
+/*HEADER*/
+
+#grilla_header.header_bienvenida {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/*MAIN*/
+.container_admin_button, .container_client_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font: 400 20px "Quicksand", sans-serif;
+    height: 45px;
+    padding: 10px 16px;
+    width: 250px;
+    color: var(--color-text);
+
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+
+    border: 1px solid var(--color-bk-search-bar);    
+    border-bottom: none;  
+    border-radius: 8px 8px 0 0;
+    background-color: var(--color-bk-access-section);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.container_admin_button:hover, .container_client_button:hover {
+    transform: scale(1.07);
+}
+
+.container_client_button {
+    justify-content: space-evenly;
+}
+
+.main_bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/static/img/fondo-bienvenida-2.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.access_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    position: relative;
+    height: 340px;
+    width: 400px;
+    padding: 20px 30px 40px 30px; 
+    border: 1px solid var(--color-bk-search-bar);      
+    border-radius: 8px;
+    background-color: var(--color-bk-access-section);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.access_section > :first-child.container_shortcut_button {
+    flex: none;
+    align-self: flex-start;
+}
+
+.access_section.admin {
+    height: 400px;
+    padding: 0 30px 40px 30px;
+}
+
+.container_shortcut_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: 500 16px "Quicksand", sans-serif;
+    width: 50%;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 8px 13px;
+    color: var(--color-text);
+    border: 2px solid var(--color-red);
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.container_shortcut_button:hover {
+    background: var(--color-red-hover);
+    border: 2px solid var(--color-red-hover);
+    transform: scale(1.03);
+}
+
+.access_section h1 {
+    font-size: 50px;
+}
+
+.access_section input {
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    color: var(--color-text);    
+    background-color: var(--color-bk-search-bar);
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease-in-out; 
+    font-size: 17px;   
+}
+
+.access_section input::placeholder {
+    color: var(--color-search-bar);
+    font-size: 17px;
+}
+
+.access_section input:focus {
+    background-color: var(--color-focus-search-bar);
+}
+
+.access_section input:focus::placeholder {
+    color: var(--color-focus-search-bar);
+}
+
+.container_continue_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: 500 18px "Quicksand", sans-serif;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    padding: 10px 16px 10px 16px;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.container_continue_button:hover {
+    background: var(--color-secondary-hover);
+    transform: scale(1.03);
+}
+
+/*MEDIA QUERIES*/
+
+/*800 PX*/
+@media (max-width: 800px) {
+    #grilla_header {
+        height: 200px;
+    }
+}
+
+/*600 PX*/
+@media (max-width: 600px) {
+    #grilla_header {
+        height: 150px;
+        align-items: stretch;
+    }
+    .container_admin_button {
+        width: 200px;
+    }
+    .access_section h1 {
+        font-size: 40px;
+    }
+    .access_section {
+        width: 300px;
+        padding: 30px 20px;
+    }
+}
+
+/*400 PX*/
+@media (max-width: 400px) {
+    #grilla_header {
+        height: 200px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+}

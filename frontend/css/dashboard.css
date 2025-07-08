@@ -1,0 +1,107 @@
+/*VARIABLES DE COLORES*/
+
+:root {
+    --color-text-white: #ffffff;
+    --color-secondary: #02e197;
+    --color-secondary-hover: #20b860;
+    --color-red: #C1121F;
+    --color-red-hover: #780000;
+}
+
+
+/* Estado del producto */
+.estado_producto {
+    font: 400 14px "Work Sans", sans-serif;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: var(--color-text-white);
+}
+
+.estado_producto.activo {
+    background-color: var(--color-secondary);
+}
+
+.estado_producto.inactivo {
+    background-color: var(--color-red);
+}
+
+/* Contenedor de botones del admin */
+.acciones_admin {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+    width: 100%;
+    align-items: center;
+}
+
+/* Botones del admin */
+.acciones_admin button {
+    font: 500 15px "Quicksand", sans-serif;
+    padding: 2px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    transition: background-color 0.3s ease-in-out;
+    width: 90%;
+}
+
+.acciones_admin button:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.btn-editar {
+    font: 500 15px "Quicksand", sans-serif;
+    padding: 2px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    transition: background-color 0.3s ease-in-out;
+    width: 90%;
+}
+
+.btn-editar button:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+
+.btn-desactivar {
+    background-color: var(--color-red);
+}
+.btn-desactivar:hover {
+    background-color: var(--color-red-hover);
+}
+
+.btn-activar {
+    background-color: var(--color-secondary);
+}
+.btn-activar:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+
+.btn-editar:hover {
+    background-color: #0056b3;
+}
+
+.new_product {
+    font: 500 15px "Quicksand", sans-serif;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    border: none;
+}
+.new_product:hover {
+    background-color: var(--color-secondary-hover);
+}
