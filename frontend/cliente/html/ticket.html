@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>TRABAJO INTEGRADOR</title>
         <!-- FAVICON -->
-        <link rel="icon" href="cliente/assets/img/favicon.png">
+        <link rel="icon" href="/static/img/favicon.png">
         <!-- CÓDIGO CSS -->
-        <link rel="stylesheet" href="cliente/css/style.css">
-        <link rel="stylesheet" href="cliente/css/ticket.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/ticket.css">
         <!-- FONT AWESOME -->
         <script src="https://kit.fontawesome.com/4e7bc93003.js" crossorigin="anonymous"></script>
         <!-- FUENTES -->
@@ -25,26 +25,26 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
         <!-- CÓDIGO JS -->
-        <script src="cliente/js/ticket.js" defer></script>
-        <script type="module" src="cliente/js/lightmode.js" defer></script>
-        <script type="module" src="cliente/js/navbar.js" defer></script>
+        <script src="/js/ticket.js" defer></script>
+        <script type="module" src="/js/lightmode.js" defer></script>
+        <script type="module" src="/js/navbar.js" defer></script>
     </head>
 
     <body id="grilla_index">
 
         <header id="grilla_header">
             <div class="container_logo">
-                <a href="/catalogo"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
+                <a href="/catalogo"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
             </div>
 
             <button class="open_navbar"><i class="fa-solid fa-bars fa-2xl"></i></button>
             <nav class="navbar header_center">
                 <button class="close_navbar"><i class="fa-solid fa-xmark fa-2xl"></i></button>
                 <ul class="navegacion">
-                    <li><a href="/" class="nav_link">Registro</a></li>
                     <li><a href="/catalogo" class="nav_link">Catálogo</a></li>
                     <li><a href="/carrito" class="nav_link">Mi carrito</a></li>
                     <li><a href="/ticket" class="nav_link">Mis compras</a></li>
+                    <li><a href="/login" class="nav_link admin">Admin</a></li>
                 </ul>
             </nav>
 
@@ -91,7 +91,7 @@
 
         <footer id="grilla_footer">
             <section class="footer_section">
-                <a href="/catalogo"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
+                <a href="/catalogo"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
             </section>
         </footer>
 

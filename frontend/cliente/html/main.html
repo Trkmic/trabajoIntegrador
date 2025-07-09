@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>TRABAJO INTEGRADOR</title>
         <!-- FAVICON -->
-        <link rel="icon" href="../assets/img/favicon.png">
+        <link rel="icon" href="/static/img/favicon.png">
         <!-- CÓDIGO CSS -->
-        <link rel="stylesheet" href="cliente/css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
         <!-- FONT AWESOME -->
         <script src="https://kit.fontawesome.com/4e7bc93003.js" crossorigin="anonymous"></script>
         <!-- FUENTES -->
@@ -21,27 +21,27 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <!-- CÓDIGO JS -->
-        <script type="module" src="cliente/js/main.js" defer></script>
-        <script type="module" src="cliente/js/lightmode.js" defer></script>
-        <script type="module" src="cliente/js/navbar.js" defer></script>
-        <script type="module" src="cliente/js/carrito.js" defer></script>
+        <script type="module" src="/js/main.js" defer></script>
+        <script type="module" src="/js/lightmode.js" defer></script>
+        <script type="module" src="/js/navbar.js" defer></script>
+        <script type="module" src="/js/carrito.js" defer></script>
     </head>
 
     <body id="grilla_index">
 
         <header id="grilla_header">
             <div class="container_logo header_left">
-                <a href="/catalogo"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
+                <a href="/catalogo"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
             </div>
 
             <button class="open_navbar"><i class="fa-solid fa-bars fa-2xl"></i></button>
             <nav class="navbar header_center">
                 <button class="close_navbar"><i class="fa-solid fa-xmark fa-2xl"></i></button>
                 <ul class="navegacion">
-                    <li><a href="/" class="nav_link">Registro</a></li>
                     <li><a href="/catalogo" class="nav_link">Catálogo</a></li>
                     <li><a href="/carrito" class="nav_link">Mi carrito</a></li>
                     <li><a href="/ticket" class="nav_link">Mis compras</a></li>
+                    <li><a href="/login" class="nav_link admin">Admin</a></li>
                 </ul>
             </nav>
 
@@ -87,14 +87,16 @@
                     </div>
 
                 </div>
-                <div class="products"></div>
+                <div class="products">
+                
+                </div>
             </section>
 
         </main>
 
         <footer id="grilla_footer">
             <section class="footer_section">
-                <a href="/catalogo"><img class="logo" src="cliente/assets/img/logo.png" alt="logo de la página"></a>
+                <a href="/catalogo"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
             </section>
         </footer>
 

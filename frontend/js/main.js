@@ -15,7 +15,7 @@ function cargarDatos(){
     fetch("http://localhost:5000/productos")
     .then(response => response.json())
     .then(data =>{
-        productos = data;
+        productos = data.filter(p => p.activo === 1 || p.activo === true); 
         renderizarProductos(productos);
     })
     .catch(() =>{

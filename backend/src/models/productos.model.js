@@ -26,5 +26,24 @@ const actualizarEstado = (id, nuevoEstado) => {
     });
 };
 
+const actualizarProducto = (id, { nombre, precio, img, categoria }) => {
+    return new Promise((resolve, reject) => {
+        const sql = `
+            UPDATE productos 
+            SET nombre = ?, precio = ?, img = ?, categoria = ? 
+            WHERE id = ?
+        `;
+        db.query(sql, [nombre, precio, img, categoria, id], (err, result) => {
+            if (err) {
+                reject(err);
+            } else if (result.affectedRows === 0) {
+                resolve(null); // si no se encuentra el producto
+            } else {
+                resolve({ id, nombre, precio, img, categoria });
+            }
+        });
+    });
+};
 
-export default { getAll, actualizarEstado };
+
+export default { getAll, actualizarEstado, actualizarProducto };

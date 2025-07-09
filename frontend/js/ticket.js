@@ -79,4 +79,4 @@ function init() {
     downloadPDF();
 }
 
-init();
+document.addEventListener("DOMContentLoaded", init);
