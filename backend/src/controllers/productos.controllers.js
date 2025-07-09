@@ -18,7 +18,6 @@ const cambiarEstadoProducto = async (req, res) => {
     }
 
     try {
-        const valorActivo = activo ? 1 : 0;
         const productoActualizado = await productoService.actualizarEstado(id, activo);
 
         if (!productoActualizado) {
@@ -35,33 +34,7 @@ const cambiarEstadoProducto = async (req, res) => {
     }
 };
 
-const actualizarProducto = async (req, res) => {
-    const { id } = req.params;
-    const { nombre, precio, img, categoria } = req.body;
-
-    if (!nombre || !precio || !img || !categoria) {
-        return res.status(400).json({ error: "Faltan campos requeridos" });
-    }
-
-    try {
-        const actualizado = await productoService.actualizarProducto(id, { nombre, precio, img, categoria });
-
-        if (!actualizado) {
-            return res.status(404).json({ error: "Producto no encontrado" });
-        }
-
-        res.status(200).json({
-            mensaje: "Producto actualizado correctamente",
-            producto: actualizado
-        });
-    } catch (error) {
-        console.error("Error al actualizar producto:", error);
-        res.status(500).json({ error: "Error interno del servidor" });
-    }
-};
-
 export default {
     getAllProductos,
-    cambiarEstadoProducto,
-    actualizarProducto
+    cambiarEstadoProducto
 };

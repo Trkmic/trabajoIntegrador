@@ -46,7 +46,7 @@ function renderizarProductos(lista){
             <p class="estado_producto ${producto.activo ? 'activo' : 'inactivo'}">Estado: ${estado}</p>
         
             <div class="acciones_admin">
-                <a href="/editarProducto?id=${producto.id}" class="btn-editar">Editar</a>
+                <button onclick="editarProducto('${producto.id}')">Editar</button>
                 ${botonAccion}
             </div>
         `;
@@ -139,46 +139,39 @@ function agregarProducto(){
 
 function manejarCambioEstado() {
     const contenedor = document.querySelector(".products");
-
     contenedor.addEventListener("click", (event) => {
         if (event.target.classList.contains("btn-activar") || event.target.classList.contains("btn-desactivar")) {
             const boton = event.target;
             const tarjeta = boton.closest(".product_card");
             const estado = tarjeta.querySelector(".estado_producto");
             const productoId = tarjeta.getAttribute("data-id");
+
+            // Determinar nuevo estado según el botón clickeado
             const nuevoEstado = boton.classList.contains("btn-activar");
 
-            fetch(`http://localhost:5000/productos/estado/${productoId}`, {
-                method: 'PUT', // o PATCH según cómo lo tengas implementado en tu backend
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ activo: nuevoEstado })
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Error al actualizar el estado del producto");
-                }
-                return response.json();
-            })
-            .then(() => {
-                // Cambiar visualmente el estado solo si el backend respondió correctamente
-                estado.textContent = `Estado: ${nuevoEstado ? "Activo" : "Inactivo"}`;
-                estado.classList.toggle("activo", nuevoEstado);
-                estado.classList.toggle("inactivo", !nuevoEstado);
+            // Cambiar visualmente el estado antes de hacer fetch
+            if(nuevoEstado) {
+                estado.textContent = "Estado: Activo";
+                estado.classList.remove("inactivo");
+                estado.classList.add("activo");
 
-                boton.textContent = nuevoEstado ? "Desactivar" : "Activar";
-                boton.classList.toggle("btn-activar", !nuevoEstado);
-                boton.classList.toggle("btn-desactivar", nuevoEstado);
+                boton.textContent = "Desactivar";
+                boton.classList.remove("btn-activar");
+                boton.classList.add("btn-desactivar");
+            } else {
+                estado.textContent = "Estado: Inactivo";
+                estado.classList.remove("activo");
+                estado.classList.add("inactivo");
 
-                // Actualizar estado en el array local
-                const producto = productos.find(p => p.id === productoId);
-                if (producto) producto.activo = nuevoEstado;
-            })
-            .catch(err => {
-                console.error(err);
-                alert("Hubo un error al actualizar el estado del producto en la base de datos.");
-            });
+                boton.textContent = "Activar";
+                boton.classList.remove("btn-desactivar");
+                boton.classList.add("btn-activar");
+            }
+
+            // Actualizar estado en el array productos
+            const producto = productos.find(p => p.id === productoId);
+            if(producto) producto.activo = nuevoEstado;
+            
         }
     });
 }
@@ -190,7 +183,7 @@ function init() {
     filtroCategoria();
     focusSearchInput();
     agregarProducto();
-    manejarCambioEstado();
+    manejarCambioEstado()
 
     const icon = document.querySelector(".container_search_icon");
     if(icon) {
