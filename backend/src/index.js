@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import productosRoutes from './routes/productos.route.js';
+import ventasRoutes from './routes/ventas.route.js';
 
 //Settings
 const app = express();
@@ -11,6 +12,9 @@ app.set('PORT', 5000);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+//Middlewares
+app.use(express.json());
+
 // Rutas absolutas a carpetas
 const rootDir = path.join(__dirname, '../../frontend');          
 const clienteDir = path.join(rootDir, 'cliente');                 
@@ -18,9 +22,6 @@ const adminDir = path.join(rootDir, 'admin');
 const cssDir = path.join(rootDir, 'css');       
 const staticDir = path.join(rootDir, 'static');
 const jsDir = path.join(rootDir, 'js');
-
-//Middlewares
-app.use(express.json())
 
 //Archivos estáticos (CSS, JS)
 app.use('/cliente', express.static(clienteDir));
@@ -36,6 +37,10 @@ app.use('/assets', express.static(path.join(__dirname, '../assets')));
 
 //API que trae productos (BDD)
 app.use('/productos', productosRoutes);
+
+//API que alamcena ventas (BDD)
+app.use('/ventas', ventasRoutes);
+
 
 //Routes lado CLIENTE
 app.get('/', (req, res) => {

@@ -1,30 +1,20 @@
 import db from '../database/connection.js';
 
-const getAll = () => {
-    return new Promise((resolve, reject) => {
-        const sql = "SELECT * FROM productos";
-        
-        db.query(sql, (err, results) => {
-            if (err) reject(err);
-            else resolve(results);
-        });
-    });
+const getAll = async () => {
+    const [rows] = await db.execute('SELECT * FROM productos');
+    return rows;
 };
 
-const actualizarEstado = (id, nuevoEstado) => {
-    return new Promise((resolve, reject) => {
-        const sql = "UPDATE productos SET activo = ? WHERE id = ?";
-        db.query(sql, [nuevoEstado, id], (err, result) => {
-            if (err) {
-                reject(err);
-            } else if (result.affectedRows === 0) {
-                resolve(null); // Producto no encontrado
-            } else {
-                resolve({ id, activo: nuevoEstado }); // Confirmación básica
-            }
-        });
-    });
-};
+const actualizarEstado = async (id, nuevoEstado) => {
+    const [result] = await db.execute(
+        'UPDATE productos SET activo = ? WHERE id = ?',
+        [nuevoEstado, id]
+    );
 
+    if (result.affectedRows === 0) return null;
+
+    const [rows] = await db.execute('SELECT * FROM productos WHERE id = ?', [id]);
+    return rows[0];
+};
 
 export default { getAll, actualizarEstado };
