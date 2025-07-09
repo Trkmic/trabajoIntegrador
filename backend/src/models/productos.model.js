@@ -45,5 +45,15 @@ const actualizarProducto = (id, { nombre, precio, img, categoria }) => {
     });
 };
 
+const crearProducto = ({ nombre, precio, img, categoria }) => {
+    return new Promise((resolve, reject) => {
+        const sql = `INSERT INTO productos (nombre, precio, img, categoria, activo) VALUES (?, ?, ?, ?, true)`;
+        db.query(sql, [nombre, precio, img, categoria], (err, result) => {
+            if (err) return reject(err);
+            
+            resolve({ id: result.insertId, nombre, precio, img, categoria, activo: true });
+        });
+    });
+};
 
-export default { getAll, actualizarEstado, actualizarProducto };
+export default { getAll, actualizarEstado, actualizarProducto, crearProducto  };

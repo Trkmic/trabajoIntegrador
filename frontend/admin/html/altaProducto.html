@@ -10,6 +10,7 @@
         <!-- CÓDIGO CSS -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/editarProducto.css">
         <!-- FONT AWESOME -->
         <script src="https://kit.fontawesome.com/4e7bc93003.js" crossorigin="anonymous"></script>
         <!-- FUENTES -->
@@ -28,20 +29,33 @@
 
         <header id="grilla_header" class=" header_bienvenida">
             <div class="container_logo">
-                <a href="/dashboard"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
+                <a href="dashboard.html"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
             </div>
 
         </header>
         
         <main id="grilla_main" class="main_bienvenida">
-            
+            <form id="form-editar">
+                <label>Nombre: <input type="text" name="nombre" required/></label><br>
+                <label>Precio: <input type="number" name="precio" required/></label><br>
+                <label>Imagen URL: <input type="text" name="img" required/></label><br>
+                <label>Categoría:
+                <select name="categoria">
+                    <option value="celular">Celular</option>
+                    <option value="accesorio">Accesorio</option>
+                    <option value="televisor">Televisor</option>
+                    <option value="componente">Componente</option>
+                </select>
+                </label><br>
+                <button type="submit">Guardar</button>
+            </form>
         </main>  
 
         <footer id="grilla_footer">
             <section class="footer_section">
-                <a href="/dashboard"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
+                <a href="dashboard.html"><img class="logo" src="/static/img/logo.png" alt="logo de la página"></a>
             </section>
         </footer>
-
+        
     </body> 
 </html>

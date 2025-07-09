@@ -61,9 +61,29 @@ const actualizarProducto = async (req, res) => {
     }
 };
 
+const crearProducto = async (req, res) => {
+    const { nombre, precio, img, categoria } = req.body;
+
+    if (!nombre || !precio || !img || !categoria) {
+        return res.status(400).json({ error: "Faltan campos requeridos" });
+    }
+
+    try {
+        const nuevoProducto = await productoService.crearProducto({ nombre, precio, img, categoria });
+        res.status(201).json({
+            mensaje: "Producto creado correctamente",
+            producto: nuevoProducto
+        });
+    } catch (error) {
+        console.error("Error al crear producto:", error);
+        res.status(500).json({ error: "Error interno del servidor" });
+    }
+};
+
 
 export default {
     getAllProductos,
     cambiarEstadoProducto,
-    actualizarProducto
+    actualizarProducto,
+    crearProducto
 };

@@ -149,7 +149,7 @@ function manejarCambioEstado() {
             const nuevoEstado = boton.classList.contains("btn-activar");
 
             fetch(`http://localhost:5000/productos/estado/${productoId}`, {
-                method: 'PUT', // o PATCH según cómo lo tengas implementado en tu backend
+                method: 'PUT', 
                 headers: {
                     'Content-Type': 'application/json'
                 },

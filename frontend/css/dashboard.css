@@ -8,6 +8,28 @@
     --color-red-hover: #780000;
 }
 
+.product_card {
+    height: 450px;
+}
+
+.ir_a_login a{
+    font: 500 15px "Quicksand", sans-serif;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: var(--color-red);
+    color: var(--color-text-white);
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    border: none;
+}
+
+.header_right {
+    justify-content: space-between;
+}
+
 
 /* Estado del producto */
 .estado_producto {

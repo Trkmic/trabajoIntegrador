@@ -13,4 +13,8 @@ const actualizarProducto = async (id, datos) => {
     return await productoModel.actualizarProducto(id, datos);
 };
 
-export default { getAll, actualizarEstado, actualizarProducto };
+const crearProducto = async (datos) => {
+    return await productoModel.crearProducto(datos);
+};
+
+export default { getAll, actualizarEstado, actualizarProducto, crearProducto };

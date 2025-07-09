@@ -1,18 +1,19 @@
-const admin_button = document.querySelector(".container_admin_button");
-const continue_button = document.querySelector(".container_continue_button");
-const shortcut_button = document.querySelector(".container_shortcut_button");
+const adminButton = document.querySelector(".container_admin_button");
+const continueButton = document.querySelector(".container_continue_button");
+const shortcutButton = document.querySelector(".container_shortcut_button");
 
 function accesoRapido() {
-    shortcut_button.addEventListener("click", () => {
+    shortcutButton.addEventListener("click", () => {
         document.getElementById("name").value = "root";
     });
 }
 
 function registrarUsuario() {
-    continue_button.addEventListener("click",() => {
-        const nombre = document.getElementById("name").value.trim();
+    continueButton.addEventListener("click", () => {
+        const userCliente = document.getElementById("name").value;
 
-        if (nombre !== "") {
+        if ((userCliente !== "") && (userCliente.length > 3)) {
+            localStorage.setItem("userCliente", userCliente);
             window.location.href = "/catalogo";
         } else {
             alert("Por favor, ingrese su nombre.");
@@ -21,7 +22,7 @@ function registrarUsuario() {
 }
 
 function cambiarPanel() {
-    admin_button.addEventListener("click", () => {
+    adminButton.addEventListener("click", () => {
         window.location.href = "/login";
     });
 }
