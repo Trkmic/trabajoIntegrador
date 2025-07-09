@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
         <!-- CÓDIGO JS -->
-        <script type="module" src="/js/editarProducto.js" defer></script>
+        <script src="/js/editarProducto.js" defer></script>
     </head>
 
     <body id="grilla_index">
@@ -34,7 +34,20 @@
         </header>
         
         <main id="grilla_main" class="main_bienvenida">
-            
+            <form id="form-editar">
+                <label>Nombre: <input type="text" name="nombre" required/></label><br>
+                <label>Precio: <input type="number" name="precio" required/></label><br>
+                <label>Imagen URL: <input type="text" name="img" required/></label><br>
+                <label>Categoría:
+                <select name="categoria">
+                    <option value="celular">Celular</option>
+                    <option value="accesorio">Accesorio</option>
+                    <option value="televisor">Televisor</option>
+                    <option value="componente">Componente</option>
+                </select>
+                </label><br>
+                <button type="submit">Guardar</button>
+            </form>
         </main>  
 
         <footer id="grilla_footer">

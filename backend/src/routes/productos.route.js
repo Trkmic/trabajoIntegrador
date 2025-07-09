@@ -4,6 +4,7 @@ import productoController from "../controllers/productos.controllers.js";
 const router = Router();
 
 router.get("/", productoController.getAllProductos);
-router.patch("/:id", productoController.cambiarEstadoProducto);
+router.put("/estado/:id", productoController.cambiarEstadoProducto);
+router.put("/:id", productoController.actualizarProducto);
 
 export default router;
