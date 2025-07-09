@@ -9,5 +9,8 @@ const actualizarEstado = async (id, nuevoEstado) => {
     return await productoModel.actualizarEstado(id, nuevoEstado);
 };
 
+const actualizarProducto = async (id, datos) => {
+    return await productoModel.actualizarProducto(id, datos);
+};
 
-export default { getAll, actualizarEstado };
+export default { getAll, actualizarEstado, actualizarProducto };
