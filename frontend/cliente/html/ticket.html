@@ -21,11 +21,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <!-- jsPDF y autoTable desde CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
         <!-- CÓDIGO JS -->
-        <script src="/js/ticket.js" defer></script>
+        <script type="module" src="/js/ticket.js" defer></script>
         <script type="module" src="/js/lightmode.js" defer></script>
         <script type="module" src="/js/navbar.js" defer></script>
     </head>
@@ -61,31 +62,7 @@
 
         <main id="grilla_main">
             <section class="ticket_section">
-                <div class="container_title_date_ticket">
-                    <h1 class="title_ticket">Ticket</h1>
-                    <div class="date_ticket">
-                        <p><span class="date_ticket"></span></p>
-                    </div>
-                </div>
-                <h2 class="subtitle_ticket">¡Muchas gracias por tu compra!</h2>
-                <p class="total_ticket">Total: $0</p>
-                <table class="table_ticket">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th class="hidden_mobile">Precio Unitario</th>
-                            <th>Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody class="items_ticket">
 
-                    </tbody>
-                </table>
-                <div class="download_pdf">
-                    <button>Descargar ticket</button>
-                    <i class="fa-solid fa-file-pdf"></i>                    
-                </div>
             </section>
         </main>
 

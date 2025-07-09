@@ -94,10 +94,6 @@ function renderizarCarrito(){
     precioTotal.textContent = `Total: $${total.toLocaleString("es-AR")}`;
 }
 
-function guardarCarrito(){
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
 function recuperarCarrito(){
     const data = localStorage.getItem("carrito");
     
@@ -122,6 +118,48 @@ function contadorCarrito(){
     }
 }
 
+function guardarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+function guardarTicket() {
+    const fecha = new Date();
+    const fechaFormateada = fecha.toLocaleDateString("es-AR");
+    const cliente = localStorage.getItem("userCliente");
+
+    const ticket = {
+        fecha: fechaFormateada,
+        user: cliente,
+        items: structuredClone(carrito),
+        total: carrito.reduce((sum, item) => sum + item.producto.precio * item.cantidad, 0)
+    };
+
+    const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
+    tickets.push(ticket);  
+    
+    localStorage.setItem("tickets", JSON.stringify(tickets));
+
+    enviarTicketAlServidor(ticket);
+}
+
+function enviarTicketAlServidor(ticket) {
+    fetch("/ventas", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(ticket)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log("Venta guardada", data);
+    })
+    .catch(err => {
+        console.log("Error al guardar la venta: ", err);
+    });
+}
+
+
 function buttonsCart() {
     const botonVaciar = document.querySelector(".clear_button");
     const botonFinalizar = document.querySelector(".end_button");
@@ -143,6 +181,7 @@ function buttonsCart() {
                 modal.classList.add("active");
 
                 confirmModal.addEventListener("click", () => {
+                    guardarTicket();
                     carrito = [];
                     window.location.href = "/ticket";
                 })

@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font: 400 20px "Quicksand", sans-serif;
+    font: 500 22px "Quicksand", sans-serif;
     height: 45px;
     padding: 10px 16px;
     width: 250px;
@@ -19,7 +19,7 @@
     cursor: pointer;
     transition: all 0.6s ease-in-out;
 
-    border: 1px solid var(--color-bk-search-bar);    
+    border: 1px solid var(--color-secondary);    
     border-bottom: none;  
     border-radius: 8px 8px 0 0;
     background-color: var(--color-bk-access-section);
@@ -55,7 +55,7 @@
     height: 340px;
     width: 400px;
     padding: 20px 30px 40px 30px; 
-    border: 1px solid var(--color-bk-search-bar);      
+    border: 1px solid var(--color-secondary);      
     border-radius: 8px;
     background-color: var(--color-bk-access-section);
     backdrop-filter: blur(12px);

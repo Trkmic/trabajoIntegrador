@@ -33,10 +33,10 @@
 
     --color-search-bar: #4a4a4b;            
     --color-focus-search-bar: rgba(22, 22, 22, 0.15); 
-    --color-bk-search-bar: rgba(0, 0, 0, 0.24);
+    --color-bk-search-bar: rgba(194, 194, 194, 0.973);
     --color-bk-section-products: rgba(0, 0, 0, 0.02);  
     --color-bk-product-card: rgba(0, 0, 0, 0.027);
-    --color-bk-access-section: rgba(243, 243, 243, 0.822);
+    --color-bk-access-section: rgba(243, 243, 243, 0.932);
     --color-bk-menu-mobile: #e2e2e2c2;
     --color-bk-ticket-hover: rgba(255, 255, 255, 0.1);
     --color-bk-ticket: rgba(125, 132, 139, 0.9);

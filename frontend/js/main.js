@@ -11,7 +11,7 @@ const titulosCategoria = {
 };
 
 
-function cargarDatos(){
+function cargarDatos() {
     fetch("http://localhost:5000/productos")
     .then(response => response.json())
     .then(data =>{
@@ -118,8 +118,6 @@ function focusSearchInput(){
         alert("error");
     }
 }
-
-
 
 function init() {
     cargarDatos();
