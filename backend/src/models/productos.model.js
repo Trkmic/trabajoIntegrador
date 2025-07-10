@@ -32,6 +32,22 @@ const actualizarProducto = async (id, { nombre, precio, img, categoria }) => {
     return rows[0];
 };
 
+const crearProducto = async ({ nombre, precio, img, categoria }) => {
+    const sql = `
+        INSERT INTO productos (nombre, precio, img, categoria, activo)
+        VALUES (?, ?, ?, ?, true)
+    `;
 
+    const [result] = await db.execute(sql, [nombre, precio, img, categoria]);
 
-export default { getAll, actualizarEstado, actualizarProducto };
+    return {
+        id: result.insertId,
+        nombre,
+        precio,
+        img,
+        categoria,
+        activo: true
+    };
+};
+
+export default { getAll, actualizarEstado, actualizarProducto, crearProducto };

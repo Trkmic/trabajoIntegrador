@@ -1,5 +1,5 @@
-// src/controllers/ventas.controllers.js
 import db from "../database/connection.js";
+import ventasService from "../services/ventas.service.js";
 
 export const guardarVenta = async (req, res) => {
     try {
@@ -46,5 +46,15 @@ export const guardarVenta = async (req, res) => {
     } catch (err) {
         console.error("Error al guardar la venta:", err);
         return res.status(500).json({ err: "Error interno del servidor" });
+    }
+};
+
+export const getVentas = async (req, res) => {
+    try {
+        const ventas = await ventasService.mostrarDetalleVentas();
+        res.status(200).json(ventas);
+    } catch (err) {
+        console.log("Error al obtener las ventas:", err);
+        res.status(500).json({err: "Error al obtener ventas"});
     }
 };

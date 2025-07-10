@@ -38,7 +38,7 @@ app.use('/assets', express.static(path.join(__dirname, '../assets')));
 //API que trae productos (BDD)
 app.use('/productos', productosRoutes);
 
-//API que alamcena ventas (BDD)
+//API que almacena y trae ventas (BDD)
 app.use('/ventas', ventasRoutes);
 
 
@@ -74,6 +74,10 @@ app.get('/altaProducto', (req, res) => {
 
 app.get('/editarProducto', (req, res) => {
     res.status(200).sendFile('admin/html/editarProducto.html', { root: rootDir });
+})
+
+app.get('/registroVentas', (req, res) => {
+    res.status(200).sendFile('admin/html/registroVentas.html', {root: rootDir});
 })
 
 //Listener

@@ -1,0 +1,76 @@
+/*HEADER*/
+
+.navegacion.administrador .ir_a_panel {
+    background-color: var(--color-secondary-hover);
+}
+
+/*MAIN*/
+
+.ventas_section {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin: 60px 30px;
+    padding: 20px 30px;
+}
+
+.venta_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-bk-product-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 30px 20px;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.venta_card h2 {
+    text-transform: uppercase;
+    font: 400 35px 'Roboto Mono', monospace;
+    text-align: center;
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.container_data_venta {
+    text-align: start;
+}
+
+.venta_card p {
+    font: 400 20px "Work Sans", sans-serif;
+    color: var(--color-text);
+}
+
+.venta_card p strong {
+    font-size: 18px;
+    color: var(--color-search-bar);
+}
+
+.detalle_items {
+    margin-top: 20px;
+}
+
+.venta_card h3 {
+    font: 500 30px "Titillium Web", sans-serif;
+    color: var(--color-text);
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.item_card {
+    margin: 10px;
+}
+
+.item_card .subtotal {
+    color: var(--color-secondary);
+    font-size: 15px;
+}

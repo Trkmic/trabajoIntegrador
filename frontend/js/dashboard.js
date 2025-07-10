@@ -32,8 +32,8 @@ function renderizarProductos(lista){
 
         const estado = producto.activo ? "Activo" : "Inactivo";
         const botonAccion = producto.activo
-            ? `<button class="btn-desactivar"> Desactivar </button>`
-            : `<button class="btn-activar"> Activar </button>`;
+            ? `<button class="btn_desactivar"> Desactivar </button>`
+            : `<button class="btn_activar"> Activar </button>`;
         
         div.innerHTML = `
             <div class="container_img_card">
@@ -46,7 +46,7 @@ function renderizarProductos(lista){
             <p class="estado_producto ${producto.activo ? 'activo' : 'inactivo'}">Estado: ${estado}</p>
         
             <div class="acciones_admin">
-                <a href="/editarProducto?id=${producto.id}" class="btn-editar">Editar</a>
+                <a href="/editarProducto?id=${producto.id}" class="btn_editar">Editar</a>
                 ${botonAccion}
             </div>
         `;
@@ -141,15 +141,15 @@ function manejarCambioEstado() {
     const contenedor = document.querySelector(".products");
 
     contenedor.addEventListener("click", (event) => {
-        if (event.target.classList.contains("btn-activar") || event.target.classList.contains("btn-desactivar")) {
+        if (event.target.classList.contains("btn_activar") || event.target.classList.contains("btn_desactivar")) {
             const boton = event.target;
             const tarjeta = boton.closest(".product_card");
             const estado = tarjeta.querySelector(".estado_producto");
             const productoId = tarjeta.getAttribute("data-id");
-            const nuevoEstado = boton.classList.contains("btn-activar");
+            const nuevoEstado = boton.classList.contains("btn_activar");
 
             fetch(`http://localhost:5000/productos/estado/${productoId}`, {
-                method: 'PUT', // o PATCH según cómo lo tengas implementado en tu backend
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -168,8 +168,8 @@ function manejarCambioEstado() {
                 estado.classList.toggle("inactivo", !nuevoEstado);
 
                 boton.textContent = nuevoEstado ? "Desactivar" : "Activar";
-                boton.classList.toggle("btn-activar", !nuevoEstado);
-                boton.classList.toggle("btn-desactivar", nuevoEstado);
+                boton.classList.toggle("btn_activar", !nuevoEstado);
+                boton.classList.toggle("btn_desactivar", nuevoEstado);
 
                 // Actualizar estado en el array local
                 const producto = productos.find(p => p.id === productoId);

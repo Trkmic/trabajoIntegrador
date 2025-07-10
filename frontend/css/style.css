@@ -8,6 +8,8 @@
     --color-footer: rgb(31, 31, 31);
     --color-secondary: #02e197;
     --color-secondary-hover: #20b860;
+    --color-tertiary: #0056b3;
+    --color-tertiary-hover: #04478f;
 
     --color-search-bar: #d4d4d4c4;
     --color-focus-search-bar: rgba(172, 172, 172, 0.24);
@@ -45,6 +47,8 @@
     --color-section-cart: rgba(44, 62, 80, 0.95);
     --color-red: #f1101f;
     --color-red-hover: #be0c0c;
+    --color-tertiary: #107df3;
+    --color-tertiary-hover: #0f70d8;
 }
 
 /*ETIQUETAS GENÉRICAS*/

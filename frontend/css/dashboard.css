@@ -1,129 +1,124 @@
-/*VARIABLES DE COLORES*/
-
-:root {
-    --color-text-white: #ffffff;
-    --color-secondary: #02e197;
-    --color-secondary-hover: #20b860;
-    --color-red: #C1121F;
-    --color-red-hover: #780000;
-}
-
-.product_card {
-    height: 450px;
-}
-
-.ir_a_login a{
-    font: 500 15px "Quicksand", sans-serif;
-    padding: 10px 16px;
+/*HEADER*/
+.navegacion.administrador li {
     border-radius: 8px;
+    margin: 0 30px;
+    padding: 10px 12px; 
+    transition: all 0.4s ease-in-out;  
+}
+
+.navegacion.administrador li:hover {
+    transform: scale(1.05); 
+}
+
+.navegacion.administrador a:hover {
+    color: var(--color-text);   
+    transform: scale(1.04);
+}
+
+.navegacion.administrador .ir_a_login {
     background-color: var(--color-red);
-    color: var(--color-text-white);
-    transition: background-color 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    border: none;
+}
+
+.navegacion.administrador .ir_a_ventas {
+    background-color: var(--color-secondary-hover);
 }
 
 .header_right {
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
+.new_product {
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    gap: 8px;        
+    font: 500 18px "Quicksand", sans-serif;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+}
+
+.new_product:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+/*MAIN*/
+
+.product_card {
+    height: 480px;
+}
+
+.product_card:hover {
+    transform: unset;
+    cursor: pointer;
+}
 
 /* Estado del producto */
+
 .estado_producto {
-    font: 400 14px "Work Sans", sans-serif;
+    font: 500 20px "Work Sans", sans-serif;
     padding: 5px 10px;
-    border-radius: 6px;
     margin: 10px 0;
     width: 100%;
     text-align: center;
-    color: var(--color-text-white);
+    color: var(--color-text);
 }
 
 .estado_producto.activo {
-    background-color: var(--color-secondary);
+    color: var(--color-secondary-hover);
 }
 
 .estado_producto.inactivo {
-    background-color: var(--color-red);
+    color: var(--color-red);
 }
 
 /* Contenedor de botones del admin */
 .acciones_admin {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     margin-top: auto;
     width: 100%;
     align-items: center;
 }
 
 /* Botones del admin */
-.acciones_admin button {
-    font: 500 15px "Quicksand", sans-serif;
-    padding: 2px;
-    border-radius: 6px;
+.acciones_admin > * {
+    font: 500 16px "Quicksand", sans-serif;
+    padding: 5px;
+    border-radius: 8px;
     text-align: center;
-    background-color: var(--color-secondary);
-    color: var(--color-text-white);
-    transition: background-color 0.3s ease-in-out;
+    color: var(--color-text);
+    transition: all 0.3s ease-in-out;
     width: 90%;
 }
 
-.acciones_admin button:hover {
-    background-color: var(--color-secondary-hover);
+.btn_editar {
+    background-color: var(--color-tertiary);
 }
 
-.btn-editar {
-    font: 500 15px "Quicksand", sans-serif;
-    padding: 2px;
-    border-radius: 6px;
-    text-align: center;
-    background-color: var(--color-secondary);
-    color: var(--color-text-white);
-    transition: background-color 0.3s ease-in-out;
-    width: 90%;
+.btn_editar:hover {
+    background-color: var(--color-tertiary-hover);
 }
 
-.btn-editar button:hover {
-    background-color: var(--color-secondary-hover);
-}
-
-
-.btn-desactivar {
+.btn_desactivar {
+    padding: 5px 0;
     background-color: var(--color-red);
 }
-.btn-desactivar:hover {
+
+.btn_desactivar:hover {
     background-color: var(--color-red-hover);
 }
 
-.btn-activar {
+.btn_activar {
+    padding: 5px 0;
     background-color: var(--color-secondary);
 }
-.btn-activar:hover {
+
+.btn_activar:hover {
     background-color: var(--color-secondary-hover);
 }
 
-
-.btn-editar:hover {
-    background-color: #0056b3;
-}
-
-.new_product {
-    font: 500 15px "Quicksand", sans-serif;
-    padding: 10px 16px;
-    border-radius: 8px;
-    background-color: var(--color-secondary);
-    color: var(--color-text-white);
-    transition: background-color 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    border: none;
-}
-.new_product:hover {
-    background-color: var(--color-secondary-hover);
-}
