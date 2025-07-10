@@ -166,12 +166,23 @@
     .container_admin_button {
         width: 200px;
     }
+    .container_shortcut_button {
+        width: 100%;
+    }
     .access_section h1 {
         font-size: 40px;
     }
     .access_section {
         width: 300px;
         padding: 30px 20px;
+    }
+}
+
+/*500 PX*/
+@media (max-width: 500px) {
+    .logo {
+        width: 300px;
+        margin-top: 20px;
     }
 }
 

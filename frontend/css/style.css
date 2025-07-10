@@ -206,6 +206,35 @@ input:focus, select:focus {
     display: block;
 }
 
+/*Navbar lado administrador*/
+.navegacion.administrador li {
+    border-radius: 8px;
+    margin: 0 30px;
+    padding: 10px 12px; 
+    transition: all 0.4s ease-in-out;  
+}
+
+.navegacion.administrador li:hover {
+    transform: scale(1.05); 
+}
+
+.navegacion.administrador a:hover {
+    color: var(--color-text);   
+    transform: scale(1.04);
+}
+
+.navegacion.administrador .ir_a_login {
+    background-color: var(--color-red);
+}
+
+.navegacion.administrador .ir_a_ventas {
+    background-color: var(--color-secondary-hover);
+}
+
+.navegacion.administrador .ir_a_panel {
+    background-color: var(--color-secondary-hover);
+}
+
 /*MAIN*/
 
 /*Sección de productos*/
@@ -524,6 +553,16 @@ input:focus, select:focus {
         margin-top: 20px;
         justify-content: end;
     }
+    .header_center.administrador {
+        grid-column: 2;
+        grid-row: 2;
+        justify-content: end;
+        margin: 5px 0 20px 0;
+    }
+    .header_right.administrador {
+        grid-column: 3;
+        grid-row: 1;
+    }
     .header_right {
         grid-column: 3;
         grid-row: 2;
@@ -545,6 +584,11 @@ input:focus, select:focus {
 
 /*1050 PX*/
 @media (max-width: 1050px) {
+    .header_right.administrador {
+        grid-column: 3;
+        grid-row: 2;
+        margin: 5px 0 20px 0;
+    }    
     .products {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -552,6 +596,14 @@ input:focus, select:focus {
 
 /*900 PX*/
 @media (max-width: 900px) {
+    .header_center.administrador {
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: start;
+    }
+    .header_right.administrador {
+        justify-content: start;
+    } 
     .products {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -611,6 +663,18 @@ input:focus, select:focus {
         opacity: 1;
         visibility: visible;
     }
+    .navbar.administrador {
+        opacity: 1;
+        visibility: unset;
+        background-color: unset;
+        gap: unset;
+        position: unset;
+        top: unset;
+        left: unset;
+        bottom: unset;
+        height: unset;
+        z-index: unset;
+    }
     .header_center {
         grid-row: unset;
         grid-column: unset;
@@ -619,6 +683,12 @@ input:focus, select:focus {
     .navegacion {
         flex-direction: column;
         align-items: start;
+    }
+    .navegacion.administrador {
+        flex-direction: row;
+    }
+    .navegacion.administrador li {
+        margin: 0 15px;
     }
     .navegacion li {
         padding: 5px 10px;

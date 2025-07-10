@@ -48,3 +48,16 @@
 #form-editar button:hover {
     background-color: #0056b3;
 }
+
+/*MEDIA QUERIES*/
+@media (max-width: 1200px) {
+    .header_center.administrador {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    #grilla_main {
+        padding: 80px 40px;
+    }
+}

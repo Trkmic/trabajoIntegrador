@@ -1,11 +1,4 @@
-/*HEADER*/
-
-.navegacion.administrador .ir_a_panel {
-    background-color: var(--color-secondary-hover);
-}
-
 /*MAIN*/
-
 .ventas_section {
     display: grid;
     justify-items: center;
@@ -73,4 +66,14 @@
 .item_card .subtotal {
     color: var(--color-secondary);
     font-size: 15px;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1200px) {
+    .header_center.administrador {
+        justify-content: center;
+    }
+    .venta_card {
+        width: 100%;
+    }
 }

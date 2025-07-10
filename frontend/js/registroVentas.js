@@ -21,7 +21,7 @@ function renderizarVentas(ventas) {
 
         let html = 
         `
-        <h2>Venta: ${venta.id}</h2>
+        <h2>¡Registro de venta exitoso!</h2>
         <div class="container_data_venta">
             <p><strong>Usuario:</strong> ${venta.user}</p>
             <p><strong>Fecha:</strong> ${fecha}</p>

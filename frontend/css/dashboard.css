@@ -1,27 +1,4 @@
 /*HEADER*/
-.navegacion.administrador li {
-    border-radius: 8px;
-    margin: 0 30px;
-    padding: 10px 12px; 
-    transition: all 0.4s ease-in-out;  
-}
-
-.navegacion.administrador li:hover {
-    transform: scale(1.05); 
-}
-
-.navegacion.administrador a:hover {
-    color: var(--color-text);   
-    transform: scale(1.04);
-}
-
-.navegacion.administrador .ir_a_login {
-    background-color: var(--color-red);
-}
-
-.navegacion.administrador .ir_a_ventas {
-    background-color: var(--color-secondary-hover);
-}
 
 .header_right {
     justify-content: space-evenly;
@@ -122,3 +99,28 @@
     background-color: var(--color-secondary-hover);
 }
 
+/*MEDIA QUERIES*/
+/*800 PX*/
+@media (max-width: 800px) {
+    #grilla_header {
+        height: 350px;
+    }
+    .header_center.administrador {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .header_right.administrador {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+    }
+}
+
+/*700 PX*/
+@media (max-width: 700px) {
+    .header_left.administrador {
+        grid-row: 1;
+    }
+}
