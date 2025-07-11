@@ -33,8 +33,6 @@ function ingresarAdmin() {
     });
 }
 
-
-
 function init() {
     accesoRapido();
     cambiarPanel();

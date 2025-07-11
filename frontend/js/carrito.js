@@ -1,10 +1,10 @@
 let carrito = [];
 
-export function agregarAlCarrito(producto){
+export function agregarAlCarrito(producto) {
     const indice = carrito.findIndex(item => item.producto.id === producto.id);
-    if(indice !== -1){
+    if (indice !== -1) {
         carrito[indice].cantidad++;
-    }else{
+    } else {
         carrito.push({producto, cantidad: 1});
         contadorCarrito();
     }
@@ -24,16 +24,16 @@ function eliminarDelCarrito(indice) {
     renderizarCarrito();
 }
 
-function renderizarCarrito(){
+function renderizarCarrito() {
     const contenedor = document.querySelector(".items_cart");
     const precioTotal = document.querySelector(".cart_total");
     const buttonsCart = document.querySelector(".buttons_cart");
 
-    if (!contenedor || !precioTotal) return; // ?
+    if (!contenedor || !precioTotal) return;
 
     contenedor.textContent = "";
 
-    if(carrito.length === 0){
+    if(carrito.length === 0) {
         contenedor.innerHTML = `<span class="empty_cart_text">No hay elementos agregados en el carrito. <i class="fa-regular fa-face-frown fa-xl"></i></span>`;
         precioTotal.textContent = "$0.00";
         if (buttonsCart) buttonsCart.classList.add("hidden");
@@ -42,7 +42,7 @@ function renderizarCarrito(){
 
     if (buttonsCart) buttonsCart.classList.remove("hidden");
 
-    carrito.forEach((item, indice) =>{
+    carrito.forEach((item, indice) => {
         const li = document.createElement("li");
         li.classList.add("item_block");
 
@@ -94,24 +94,24 @@ function renderizarCarrito(){
     precioTotal.textContent = `Total: $${total.toLocaleString("es-AR")}`;
 }
 
-function recuperarCarrito(){
+function recuperarCarrito() {
     const data = localStorage.getItem("carrito");
     
-    if(data){
+    if (data) {
         carrito = JSON.parse(data);
         contadorCarrito();
         renderizarCarrito();
     }
 }
 
-function vaciarCarrito(){
+function vaciarCarrito() {
     carrito = [];
     localStorage.removeItem("carrito");
     contadorCarrito();
     renderizarCarrito();
 }
 
-function contadorCarrito(){
+function contadorCarrito() {
     const contador = document.querySelector(".contador_cart");
     if (contador) {
         contador.textContent = carrito.length;
@@ -203,7 +203,6 @@ function buttonsCart() {
     };
 
 }
-
 
 function init() {
     recuperarCarrito();

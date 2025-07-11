@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             form.nombre.value = producto.nombre;
             form.precio.value = producto.precio;
             form.img.value = producto.img;
-            form.categoria.value = producto.categoria; // si tenés categoría
+            form.categoria.value = producto.categoria;
         })
         .catch(err => {
             console.error(err);
@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
             nombre: form.nombre.value,
             precio: parseFloat(form.precio.value),
             img: form.img.value,
-            categoria: form.categoria.value // si lo usás
+            categoria: form.categoria.value
         };
 
         fetch(`http://localhost:5000/productos/${productoId}`, {
-            method: "PUT", // o PATCH
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },

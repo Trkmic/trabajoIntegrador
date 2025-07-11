@@ -1,5 +1,4 @@
 /*HEADER*/
-
 #grilla_header.header_bienvenida {
     grid-template-columns: 1fr;
     justify-items: center;

@@ -8,20 +8,19 @@ const titulosCategoria = {
     celular: "TODOS LOS CELULARES"
 };
 
-
-function cargarDatos(){
+function cargarDatos() {
     fetch("http://localhost:5000/productos")
-    .then(response => response.json())
-    .then(data =>{
-        productos = data;
-        renderizarProductos(productos);
-    })
-    .catch(() =>{
-        console.error("Hubo un error al cargar los datos!");
-    })
+        .then(response => response.json())
+        .then(data => {
+            productos = data;
+            renderizarProductos(productos);
+        })
+        .catch( () => {
+            console.error("Hubo un error al cargar los datos!");
+        })
 }
 
-function renderizarProductos(lista){
+function renderizarProductos(lista) {
     const contenedor = document.querySelector(".products");
     contenedor.textContent = "";
     
@@ -55,7 +54,7 @@ function renderizarProductos(lista){
     });
 }
 
-function filtro(){
+function filtro() {
     const searchBar = aplicarFiltro();
     searchBar.addEventListener("keyup", aplicarFiltro);
     searchBar.addEventListener("keydown", aplicarFiltro);
@@ -81,7 +80,7 @@ function aplicarFiltro() {
     return searchBar;
 }
 
-function filtroCategoria(){
+function filtroCategoria() {
     const desplegable = document.querySelector(".container_select_icon");
     const lista = document.querySelector(".select_items");
     const opciones = document.querySelectorAll(".select_items li");
@@ -119,16 +118,16 @@ function filtroCategoria(){
         });
 }
 
-function focusSearchInput(){
+function focusSearchInput() {
     const input = document.getElementById("search_input");
     if(input) {
         input.focus();
-    } else{
+    } else {
         alert("error");
     }
 }
 
-function agregarProducto(){
+function agregarProducto() {
     const new_product = document.getElementById("new_product");
 
     new_product.addEventListener("click", () => {

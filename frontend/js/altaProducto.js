@@ -18,17 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify(datos)
         })
-        .then(res => {
-            if (!res.ok) throw new Error("Error al crear el producto");
-            return res.json();
-        })
-        .then(data => {
-            alert("Producto creado correctamente");
-            window.location.href = "/dashboard";
-        })
-        .catch(err => {
-            console.error(err);
-            alert("Error al crear el producto");
-        });
+            .then(res => {
+                if (!res.ok) throw new Error("Error al crear el producto");
+                return res.json();
+            })
+            .then(data => {
+                alert("Producto creado correctamente");
+                window.location.href = "/dashboard";
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Error al crear el producto");
+            });
     });
 });
